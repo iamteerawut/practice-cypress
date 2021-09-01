@@ -34,11 +34,9 @@ After a moment, the Cypress Test Runner will launch.
 
 ## Documentation
 
-- [Robot Framework User Guide](http://robotframework.org/robotframework/#user-guide)
-- [Standard libraries](http://robotframework.org/robotframework/#standard-libraries)
-- [Built-in tools](http://robotframework.org/robotframework/#built-in-tools)
-- [API documentation](http://robot-framework.readthedocs.org/)
-- [General documentation and demos](http://robotframework.org/#documentation)
+- [Cypress Guide](https://docs.cypress.io/guides/overview/why-cypress)
+- [API documentation](https://docs.cypress.io/api/table-of-contents)
+- [General documentation and demos](https://docs.cypress.io/examples/examples/recipes)
 
 ## Contributing
 
