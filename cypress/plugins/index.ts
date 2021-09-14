@@ -1,5 +1,3 @@
-/// <reference path="../support/index.d.ts" />
-
 const allureWriter = require('@shelex/cypress-allure-plugin/writer')
 /**
  * @type {Cypress.PluginConfig}

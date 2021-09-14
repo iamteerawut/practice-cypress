@@ -1,25 +1,25 @@
-/// <reference path="../../support/index.d.ts" />
-
-import {Severity} from '../../../node_modules/@shelex/cypress-allure-plugin/reporter/index'
-
 describe('example to-do app', () => {
   beforeEach(() => {
     cy.visit('/todo')
   })
 
+  const todosTitles = ['Pay electric bill', 'Walk the dog']
   const verifyList = (length: number) => {
     cy.dataCy('new-todo')
     cy.get('.todo-list li').should('have.length', length)
-    cy.get('.todo-list li').first().should('have.text', 'Pay electric bill')
-    cy.get('.todo-list li').last().should('have.text', 'Walk the dog')
-  }
-
-  const allureFeat = (severity: Severity, tag: string) => {
-    cy.allure().severity(severity).tag(tag)
+    cy.get('.todo-list li').each((item, index) => {
+      cy.wrap(item).should('have.text', todosTitles[index])
+    })
   }
 
   it('displays two todo item by default', () => {
-    allureFeat('minor', 'smoke')
+    cy.setAllure('minor', 'smoke')
+    const pages = ['Utilities', 'Cypress API']
+    pages.forEach(page => {
+      cy.contains(page).each(page => {
+        cy.request(page.prop('href'))
+      })
+    })
     verifyList(2)
   })
   it('can add new todo items', () => {

@@ -5,7 +5,9 @@
     "types": ["cypress"]
   },
   "include": [
-    "**/*.ts",
+    "cypress/**/*.d.ts",
+    "cypress/**/*.spec.ts",
+    "cypress/**/*.ts",
     "node_modules/@shelex/cypress-allure-plugin/reporter",
     "node_modules/cypress"
   ]
